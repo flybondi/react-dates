@@ -573,7 +573,7 @@ export default class DayPickerRangeController extends React.Component {
       },
     });
 
-    onMultiplyScrollableMonths();
+    onMultiplyScrollableMonths(nextMonth.clone());
   }
 
   getFirstFocusableDay(newMonth) {
