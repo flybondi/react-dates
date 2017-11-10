@@ -719,6 +719,8 @@ export default class DayPickerRangeController extends React.Component {
     if (orientation !== VERTICAL_SCROLLABLE) {
       currentMonth = currentMonth.clone().subtract(1, 'month');
       numberOfMonths += 2;
+    } else {
+      numberOfMonths = Object.keys(visibleDays).length;
     }
     if (!day || !isDayVisible(day, currentMonth, numberOfMonths, enableOutsideDays)) {
       return updatedDays;
